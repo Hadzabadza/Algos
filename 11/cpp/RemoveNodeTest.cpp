@@ -42,15 +42,16 @@ void RemoveNodeTest::testRemove1() {
 void RemoveNodeTest::testRemove2() {
   Node *n = new Node(1, Node::NIL);
   Node *nn = new Node(2, n);
-  Node *r = n->remove(0);
-  CPPUNIT_ASSERT(r != n);
+  Node *r = nn->remove(0);
+  CPPUNIT_ASSERT(r != nn);
   CPPUNIT_ASSERT(r->length() == 2);
   CPPUNIT_ASSERT(r->getItem() == 2);
+  CPPUNIT_ASSERT(r->getNext() != n);
   CPPUNIT_ASSERT(r->getNext()->getItem() == 1);
   CPPUNIT_ASSERT(r->getNext()->getNext() == Node::NIL);
   /* again, ignoring memory leaks from ->remove() */
-  r = n->remove(1);
-  CPPUNIT_ASSERT(r != n);
+  r = nn->remove(1);
+  CPPUNIT_ASSERT(r != nn);
   CPPUNIT_ASSERT(r->length() == 1);
   CPPUNIT_ASSERT(r->getItem() == 2);
   CPPUNIT_ASSERT(r->getNext() == Node::NIL);

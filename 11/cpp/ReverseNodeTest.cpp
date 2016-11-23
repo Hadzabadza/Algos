@@ -19,23 +19,18 @@ public:
 };
 
 void ReverseNodeTest::testReverseOfNIL() {
-  Node *n = Node::NIL->reverse(1);
+  Node *n = Node::NIL->reverse();
   CPPUNIT_ASSERT(n == Node::NIL);
-  n = Node::NIL->reverse(0);
-  CPPUNIT_ASSERT(n == Node::NIL);  
 }
 
 void ReverseNodeTest::testReverse1() {
   Node *n = new Node(1, Node::NIL);
-  Node *r = n->reverse(0);
+  Node *r = n->reverse();
   CPPUNIT_ASSERT(r != n);
   CPPUNIT_ASSERT(r->length() == 1);
   CPPUNIT_ASSERT(r->getItem() == 1);
   CPPUNIT_ASSERT(r->getNext() == Node::NIL);
   /* we're going to ignore memory leaks from ->reverse() for now */
-  r = n->reverse(1);
-  CPPUNIT_ASSERT(r->length() == 1);
-  CPPUNIT_ASSERT(r == Node::NIL);
   delete n;
 }
 
