@@ -15,7 +15,7 @@ int Node::getItem() {
 }
 
 Node *Node::getNext() {
-  return this;
+  return NULL;
 }
 
 void Node::setItem(int i) {
@@ -29,11 +29,11 @@ unsigned int Node::length() {
 }
 
 Node *Node::remove(int i) {
-  return this;
+  return NULL;
 }
 
 Node *Node::reverse() {
-  return this;
+  return NULL;
 }
 
 /*

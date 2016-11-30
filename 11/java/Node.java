@@ -3,10 +3,10 @@ class Node {
     public static final Node NIL = new Node(Node.NIL, Node.NIL);
 
     public Object getItem() {
-        return this;
+        return null;
     }
     public Node getNext() {
-        return this;
+        return null;
     }
     public void setItem() {
     }
@@ -18,9 +18,9 @@ class Node {
         return -1;
     }
     public Node remove(Object o) {
-        return this;
+        return null;
     }
     public Node reverse() {
-        return this;
+        return null;
     }
 }
