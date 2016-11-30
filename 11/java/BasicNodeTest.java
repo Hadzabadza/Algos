@@ -3,19 +3,19 @@ import static org.junit.Assert.assertNotEquals;
 import java.util.Random;
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
-//import barrypitman.junitXmlFormatter.AntXmlRunListener;
+import org.junit.runner.Result;
 
 public class BasicNodeTest {
     @Test
     public void testConstructor() {
         Node n = new Node(0, Node.NIL);
-        assertNotEquals(null, n);
-        assertEquals(0, n.getItem());
-        assertEquals(Node.NIL, n.getNext());
+        assertNotEquals("The Node constructor must never return null", null, n);
+        assertEquals("The Node constructor must treat its first argument as the item (or getItem() isn't working yet)", 0, n.getItem());
+        assertEquals("The Node constructor must treat its second argument as the next node (or getNext() isn't working yet)", Node.NIL, n.getNext());
         Node nn = new Node(104, n);
-        assertNotEquals(null, nn);
-        assertEquals(104, nn.getItem());
-        assertEquals(n, nn.getNext());
+        assertNotEquals("The Node constructor must never return null", null, nn);
+        assertEquals("The Node constructor must treat its first argument as the item (or getItem() isn't working yet); something might be defaulting to 0", 104, nn.getItem());
+        assertEquals("The Node constructor must treat its second argument as the next node (or getNext() isn't working yet); something might be defaulting to Node.NIL", n, nn.getNext());
     }
     @Test
     public void testGetItem() {
@@ -29,9 +29,8 @@ public class BasicNodeTest {
 
     public static void main(String[] args) {
         JUnitCore core = new JUnitCore();
-        // AntXmlRunListener listener = new AntXmlRunListener();
-        // listener.setOutputStream(System.out);
-        // core.addListener(listener);
-        core.run(BasicNodeTest.class);
+        // no listeners, no output
+        Result result = core.run(BasicNodeTest.class);
+        System.exit(result.wasSuccessful() ? 0 : 1);
     }
 }
