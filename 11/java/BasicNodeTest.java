@@ -23,8 +23,27 @@ public class BasicNodeTest {
         for (int k = 0; k < 100; k++) {
             int i = r.nextInt(Integer.MAX_VALUE);
             Node n = new Node(i, Node.NIL);
-            assertEquals(i, n.getItem());
+            assertEquals("getItem() returned something unexpected after a constructor", i, n.getItem());
         }
+    }
+    @Test
+    public void testSetItem() {
+        Random r = new Random();
+        Node n = new Node(0, Node.NIL);
+        for (int k = 0; k < 100; k++) {
+            int i = r.nextInt(Integer.MAX_VALUE);
+            n.setItem(i);
+            assertEquals("getItem() returned something unexpected after setItem()", i, n.getItem());
+        }
+    }
+    @Test
+    public void testSetNext() {
+        Node n = new Node(1, Node.NIL);
+        Node nn = new Node(2, Node.NIL);
+        n.setNext(nn);
+        assertEquals("getNext() returned something unexpected after setNext()", nn, n.getNext());
+        nn.setNext(nn);
+        assertEquals("getNext() returned something unexpected after setNext()", nn, nn.getNext());        
     }
 
     public static void main(String[] args) {

@@ -8,9 +8,9 @@ class Node {
     public Node getNext() {
         return null;
     }
-    public void setItem() {
+    public void setItem(Object o) {
     }
-    public void setNext() {
+    public void setNext(Node n) {
     }
 
     // no such thing as `unsigned' in Java
