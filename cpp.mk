@@ -9,5 +9,5 @@ endif
 ifeq ($(MYOS),Darwin)
 CPPUNITDIR = /Users/Shared/CppUnit
 CPPFLAGS += -I$(CPPUNITDIR)/include
-CXXFLAGS += -L$(CPPUNITDIR)/lib
+LDFLAGS += -L$(CPPUNITDIR)/lib
 endif
