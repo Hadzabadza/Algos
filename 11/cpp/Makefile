@@ -1,6 +1,6 @@
 include ../../cpp.mk
 
-NodeTest: Node.o NodeTest.o BasicNodeTest.o LengthNodeTest.o RemoveNodeTest.o ReverseNodeTest.o
+NodeTest: Node.o NodeTest.o BasicNodeTest.o
 
 test: NodeTest
 	./NodeTest
