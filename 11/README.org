@@ -10,17 +10,17 @@
    probe whether you have correctly implemented your programmes, but
    to run them you will need to configure and install software: [[http://junit.org/junit4/][JUnit4]]
    or [[https://freedesktop.org/wiki/Software/cppunit/][cppunit]] for Java and C++, respectively.  Follow the instructions
-   at XXX to identify what you need to do, and the respective
+   [[https://learn.gold.ac.uk/mod/url/view.php?id=401891][on the VLE]] to identify what you need to do, and the respective
    installation instructions for the software you need to get started.
 ** Getting the lab distribution
    You will also need to get the lab code, which is distributed from a
-   git repository hosted on the [[http://gitlab.doc.gold.ac.uk][Department's gitlab instance]].  You
+   [[http://gitlab.doc.gold.ac.uk/crhodes/is52038-labs][git repository]] hosted on the [[http://gitlab.doc.gold.ac.uk][Department's gitlab instance]].  You
    should be able to issue the following command:
 #+begin_example
-  git clone ...
+  git clone http://gitlab.doc.gold.ac.uk/crhodes/is52038-labs.git
 #+end_example
-   and the lab bundle code will be downloaded to the ... directory
-   relative to your current directory.
+   and the lab bundle code will be downloaded to the =is52038-labs=
+   directory relative to your current directory.
 * Linked list class
 ** Implementation
    In this part, you are required to implement a =Node= class, whose

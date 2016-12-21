@@ -24,6 +24,14 @@ void Node::setItem(int i) {
 void Node::setNext(Node *n) {
 }
 
+int Node::nthItem(unsigned int i) {
+  return 0;
+}
+
+Node *Node::nthNext(unsigned int i) {
+  return NULL;
+}
+
 unsigned int Node::length() {
   return UINT_MAX;
 }

@@ -13,6 +13,13 @@ class Node {
     public void setNext(Node n) {
     }
 
+    public Object nthItem(int i) {
+        return null;
+    }
+    public Node nthNext(int i) {
+        return null;
+    }
+
     // no such thing as `unsigned' in Java
     public int length() {
         return -1;

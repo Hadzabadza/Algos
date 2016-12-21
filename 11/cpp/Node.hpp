@@ -8,6 +8,9 @@ public:
   void setItem(int);
   void setNext(Node *);
 
+  int nthItem(unsigned int);
+  Node *nthNext(unsigned int);
+  
   unsigned int length();
   Node *remove(int i);
   Node *reverse();
