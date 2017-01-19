@@ -17,15 +17,16 @@ public:
 };
 
 void LengthNodeTest::testLengthOfNIL() {
-  CPPUNIT_ASSERT(Node::NIL->length() == 0);
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("What is the length of NIL?", 0U, Node::NIL->length());
 }
 
 void LengthNodeTest::testLength() {
   Node *n = new Node(1, Node::NIL);
-  CPPUNIT_ASSERT(n->length() == 1);
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("What is the length of a list whose next is NIL?", 1U, n->length());
   Node *nn = new Node(2, n);
-  CPPUNIT_ASSERT(n->length() == 2);
-  delete n, nn;
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("What is the length of a list whose next is a list with length 1?", 2U, nn->length());
+  delete n;
+  delete nn;
 }
 
 CPPUNIT_TEST_SUITE_NAMED_REGISTRATION(LengthNodeTest, "Length");
