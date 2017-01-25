@@ -28,8 +28,9 @@ public:
   };
   void tearDown() {
     for (int i = 0; i < NCASES; i++) {
+      int count = 0, limit = pow(2,i); // defend against unimplemented ->getNext()
       Node *n = nodes2[i];
-      while(n != Node::NIL) {
+      while(n != Node::NIL && count++ < limit) {
 	Node *d = n;
 	n = n->getNext();
 	delete d;
