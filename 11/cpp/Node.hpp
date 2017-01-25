@@ -1,3 +1,6 @@
+#ifndef NODE_HPP
+#define NODE_HPP
+
 class Node {
 public:
   Node(int, Node *);
@@ -15,3 +18,5 @@ public:
   Node *remove(int i);
   Node *reverse();
 };
+
+#endif
