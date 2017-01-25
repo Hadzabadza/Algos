@@ -48,7 +48,8 @@ void CycleTest::testNoncyclicInfo() {
 }
 
 void CycleTest::testSmallCyclicDetection() {
-  Node *n = new Node(1, n);
+  Node *n = new Node(1, Node::NIL);
+  n->setNext(n);
   CPPUNIT_ASSERT_MESSAGE("A one-element cyclic list should be detected as cyclic", isCyclic(n));
   Node *nn = new Node(2, n);
   CPPUNIT_ASSERT_MESSAGE("A two-element list with a cycle at the end should be detected as cyclic", isCyclic(nn));
@@ -60,7 +61,8 @@ void CycleTest::testSmallCyclicDetection() {
 }
 
 void CycleTest::testSmallCyclicInfo() {
-  Node *n = new Node(1, n);
+  Node *n = new Node(1, Node::NIL);
+  n->setNext(n);
   CycleInfo *cn = cycleInfo(n);
   CPPUNIT_ASSERT_MESSAGE("A one-element cyclic list should be detected as cyclic", NULL != cn);
   CPPUNIT_ASSERT_EQUAL_MESSAGE("A one-element cyclic list's cycle starts at 0", 0U, cn->start);

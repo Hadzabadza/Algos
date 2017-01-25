@@ -62,6 +62,7 @@ void Timing12Test::testLengthTiming() {
   auto end = std::chrono::steady_clock::now();
   diff2 = end - start;
   double ratio = diff2.count() / diff.count();
+  CPPUNIT_ASSERT_MESSAGE("length should scale linearly with list size", ratio > 1.2);    
   CPPUNIT_ASSERT_MESSAGE("length should scale linearly with list size", ratio < 2.5);    
 }
 
@@ -83,6 +84,7 @@ void Timing12Test::testRemoveTiming() {
   auto end = std::chrono::steady_clock::now();
   diff2 = end - start;
   double ratio = diff2.count() / diff.count();
+  CPPUNIT_ASSERT_MESSAGE("remove should scale linearly with list size", ratio > 1.2);    
   CPPUNIT_ASSERT_MESSAGE("remove should scale linearly with list size", ratio < 2.5);    
 }
 
@@ -104,6 +106,7 @@ void Timing12Test::testReverseTiming() {
   auto end = std::chrono::steady_clock::now();
   diff2 = end - start;
   double ratio = diff2.count() / diff.count();
+  CPPUNIT_ASSERT_MESSAGE("reverse should scale linearly with list size", ratio > 1.2);
   CPPUNIT_ASSERT_MESSAGE("reverse should scale linearly with list size", ratio < 2.5);
 }
 

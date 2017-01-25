@@ -13,7 +13,6 @@ CycleTest: ../../11/cpp/Node.o CycleDetection.o CycleTest.o
 	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
 test: NodeTest CycleTest
-	./NodeTest
-	./CycleTest
+	./NodeTest; ./CycleTest
 
 .PHONY: test all
