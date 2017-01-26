@@ -63,3 +63,6 @@
       your implementation using the provided =CycleTest= code.
    3. Now that you have implemented =cycleInfo=, can you simplify your
       implementation of =isCyclic=?
+   4. How would you integrate cycle detection to defend your
+      implementations of linear list algorithms against cyclic list
+      inputs?
