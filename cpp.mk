@@ -1,4 +1,5 @@
-LDFLAGS += -lcppunit -lstdc++
+LDLIBS += -lcppunit -lstdc++
+CXXFLAGS += -std=c++11
 
 ifeq ($(OS),Windows_NT)
   MYOS := Windows
