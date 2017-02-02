@@ -56,3 +56,18 @@
    direct constructors.  Can you verify the time complexity given in
    the lectures for the two different constructors?  Is one of them
    always faster than the other?
+** Implement heapsort
+   I have been providing tests for you, to help guide your
+   implementations and give you instant feedback on your work.  In
+   professional development, it is more usual for the same developers
+   (or team of developers) to produce tests as to produce the
+   functional code.
+
+   Implement heapsort.  You will need to:
+   1. extend the skeleton to add a method with an appropriate signature;
+   2. implement the heapsort method itself;
+   3. write tests to check the functionality of heapsort;
+   4. add the tests to the test suite by editing the Makefile
+      appropriately.
+   (Before you start, think about which order you will do these things
+   in, and why.)
