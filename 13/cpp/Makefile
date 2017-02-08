@@ -1,6 +1,6 @@
 include ../../cpp.mk
 
-LDFLAGS += -lm
+LDLIBS += -lm
 
 all: NodeTest CycleTest
 
