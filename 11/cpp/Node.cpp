@@ -8,32 +8,55 @@ using namespace std;
 Node * const Node::NIL = new Node(0, NULL);
 
 Node::Node(int i, Node *n) {
+	setItem(i);
+	setNext(n);
 }
 
 int Node::getItem() {
-  return 0;
+  return item;
 }
 
 Node *Node::getNext() {
-  return NULL;
+  return next;
 }
 
 void Node::setItem(int i) {
+	item = i;
 }
 
 void Node::setNext(Node *n) {
+	next = n;
 }
 
 int Node::nthItem(unsigned int i) {
-  return 0;
+	unsigned int x = 0;
+	Node * n =this;
+	while (x < i) {
+		if (n->getNext() == NULL)
+			return 0;
+		n =n->getNext();
+	}
+  return n->getItem();
 }
 
 Node *Node::nthNext(unsigned int i) {
-  return NULL;
+	unsigned int x = 0;
+	Node * n = this;
+	while (x < i) {
+		if (n->getNext() == NULL)
+			return NULL;
+		n = n->getNext();
+	}
+	return n;
 }
 
 unsigned int Node::length() {
-  return UINT_MAX;
+	unsigned int length;
+	Node * n = this;
+	while (n->getNext()!=NULL) {
+		n = n->getNext();
+	}
+  return length;
 }
 
 Node *Node::remove(int i) {

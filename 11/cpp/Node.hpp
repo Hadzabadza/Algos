@@ -3,6 +3,10 @@
 
 class Node {
 public:
+
+	int item;
+	Node * next=NULL;
+
   Node(int, Node *);
   static Node * const NIL;
 
