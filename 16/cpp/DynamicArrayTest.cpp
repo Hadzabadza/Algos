@@ -72,7 +72,6 @@ void DynamicArrayTest::testLargePop() {
 CPPUNIT_TEST_SUITE_NAMED_REGISTRATION(DynamicArrayTest, "DynamicArray");
 CPPUNIT_REGISTRY_ADD_TO_DEFAULT("DynamicArray");
 
-
 /* FIXME: more boilerplate */
 int main(int argc, char *argv[]) {
   if (argc > 2) {
@@ -91,5 +90,4 @@ int main(int argc, char *argv[]) {
 
   bool wasSuccessful = runner.run();
   return wasSuccessful ? 0 : 1;
-
 }
