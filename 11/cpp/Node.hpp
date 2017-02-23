@@ -5,6 +5,8 @@ class Node {
 public:
   Node(int, Node *);
   static Node * const NIL;
+  int item;
+  Node * next;
 
   Node *getNext();
   int getItem();
