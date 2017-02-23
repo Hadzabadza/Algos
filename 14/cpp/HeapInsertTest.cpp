@@ -28,7 +28,7 @@ void HeapInsertTest::testInsertIntoHeap() {
   std::vector<int> v = {1, -3, 17, 4, 2};
   Heap h = Heap(v);
   CPPUNIT_ASSERT_MESSAGE("The heap constructed violates the heap property", check_heap(h));
-  CPPUNIT_ASSERT_EQUAL_MESSAGE("The array should have a size of 1", 1UL, h.array.size());
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("The array should have a size of 5", 5UL, h.array.size());
   CPPUNIT_ASSERT_EQUAL_MESSAGE("The root of the heap should be the maximum element", 17, h.array[0]);
   h.insert(-5);
   CPPUNIT_ASSERT_MESSAGE("After inserting -5, the heap is no longer a heap", check_heap(h));
